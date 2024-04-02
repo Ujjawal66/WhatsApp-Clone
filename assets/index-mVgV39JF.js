@@ -345,6 +345,7 @@ margin: 5% 3%;
 gap: 0.6rem;
 img {
   width: 30rem;
+  max-width: 40vw;
 }
 h3 {
 
