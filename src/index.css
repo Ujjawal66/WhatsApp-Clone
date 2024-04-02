@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-overflow: ellipsis;
+    transition: 250ms;
+}
+body {
+    min-height: 100vh;
+}
+
+#ko {
+    background: left/cover url('/images/backgroundDefault.jpg');
+    height: 100vh;
+}
+
+.kalu {
+    height: 4px;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    left: 0;
+    animation: kful 32s linear infinite;
+}
+
+@keyframes kful {
+    100% {
+        width: 100%;
+    }
+}
+
+#huhy {
+    max-width: 80%;
+    width: fit-content;
+    margin: 2rem auto;
+    background-color:#f5cd83;
+    color: #4d4c4c;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 grey;
+}
