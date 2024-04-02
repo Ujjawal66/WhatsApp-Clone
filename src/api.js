@@ -21,9 +21,9 @@ class Person {
 let chats = [];
 export const defaultStatus = new Person('My status', 0, 'Tap to add status update');
 
-chats.push(new Person('Ujjawal Singh', 2, '7:00 pm',"/images/me.jpg", "/images/myStatus.mp4", false));
-chats.push(new Person('Sasuke', 1, "1:00 am", '/images/sasuke.jpg'));
-chats.push(new Person('Elon musk', 2, '5:00 pm',"/images/emusk.jpg", "/images/eloneStat.jpg", true));
+chats.push(new Person('Ujjawal Singh', 2, '7:00 pm',"images/me.jpg", "images/myStatus.mp4", false));
+chats.push(new Person('Sasuke', 1, "1:00 am", 'images/sasuke.jpg'));
+chats.push(new Person('Elon musk', 2, '5:00 pm',"images/emusk.jpg", "images/eloneStat.jpg", true));
 chats.push(new Person('NO Name', null, '5:00 pm'));
 chats.push(new Person('NO Name', null, '5:00 pm'));
 chats.push(new Person('NO Name', null, '5:00 pm'));
