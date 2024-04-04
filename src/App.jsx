@@ -4,10 +4,11 @@ import Screen2 from "./Screen2.jsx";
 import chat from './api.js';
 
 const nowTime = () => {
-  let t = new Date().toLocaleTimeString().split(" ");
-  let t1= t[0].split(":");
-  let tim = t1.slice(0, 2).join(":") +" "+ t[1];
-  return tim;
+  let date = new Date(); 
+  let h=date.getHours(), m=date.getMinutes(), og="AM";
+  if(h>12) {h-=12;og="PM"}
+  else if(h==0) h=12;
+  return h+':'+m+' '+og;
 }
 const App = () => {
   const [chats, setChats] = useState(chat);
