@@ -8,9 +8,9 @@ const Screen2 = ({person, backFunction, onSend}) => {
   const h2 = useRef();
   const [hite, setHite] = useState([]);
   useEffect(() => {
-    let newTop = h1.current.clientHeight
-    let perHeight = (h1.current.clientHeight+h2.current.clientHeight)/innerHeight;
-    setHite([newTop, 100 - (perHeight*100)]);
+    let newTop = h1.current.clientHeight;
+    let newBottom = h2.current.clientHeight;
+    setHite([newTop, newBottom]);
   }, [h1, h2]);
   
   return (

@@ -30,7 +30,6 @@ i {
 `
 
 const Boop = styled.div`
-  // background-color: yellow;
   position: absolute;
   width:100%;
   padding: 0 0.4rem;
@@ -38,9 +37,9 @@ const Boop = styled.div`
 `
 const Pop = styled.div`
 width: 100%;
-height: ${({h}) => h}%;
 position: absolute;
 top: ${({h1}) => h1}px;
+bottom: ${({h2}) => h2}px;
 overflow-y: scroll;
 `
 const Baate =({list, hite}) => {
@@ -54,7 +53,7 @@ const Baate =({list, hite}) => {
   })
   
   return (
-    <Pop h1={hite[0]} h={hite[1]} ref={ffo}>
+    <Pop h1={hite[0]} h2={hite[1]} ref={ffo}>
       <Boop ref={scroling} iss={isScroll}>
         <div id="huhy">🔒 Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more</div>
         {list.map((item, index) => <Mine key={index} {...item}/>)}

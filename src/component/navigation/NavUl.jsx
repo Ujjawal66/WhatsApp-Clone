@@ -57,8 +57,6 @@ export const NavUl2 = styled.ul`
 `;
 
 export const NavUl3 = styled.ul`
-position: fixed;
-top: 0;
 width: 100%;
 display: flex;
 list-style-type: none;

@@ -26,7 +26,7 @@ export const NavigationB = ({onChange, active}) => {
   )
 } 
 export const NavigationC = ({pp, name, backFunction, h}) => (
-  <nav>
+  <nav style={{position: 'fixed',top:'0', width: '100%', zIndex: "10"}}>
     <NavUl3 ref={h}>
       <li className="b" onClick={() => backFunction(null)}><i className="fa-solid fa-arrow-left"></i><img src={pp || 'images/default.jpg'}/></li>
       <li className="c">
