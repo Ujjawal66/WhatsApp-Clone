@@ -20,11 +20,11 @@ input {
 label {flex: 1 1 auto;
   position: relative;}
 button {
-  display: flex;
+    flex: 0 0 3rem;
+    display: flex;
     justify-content: center;align-items: center;
     border: none;
     height: 3rem;
-    width: 3rem;
     background-color: #1bc097;
     border-radius: 50%;
     i {
@@ -76,7 +76,7 @@ const SendMsg =({onSend, h}) => {
     }} ref={h}>
       <label>
         <i className="fa-regular fa-face-smile-beam a"></i>
-        <input type="text" placeholder="Message" value={value} onChange={handlerChange} autoFocus/>
+        <input type="text" placeholder="Message" value={value} onChange={handlerChange}/>
         <i className="fa-solid fa-paperclip b" ref={b}></i>
         <i className="fa-brands fa-bitcoin c" ref={c}></i>
         <i className="fa-solid fa-camera d" ref={d}></i>
