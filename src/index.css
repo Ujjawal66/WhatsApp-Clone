@@ -6,9 +6,6 @@
     text-overflow: ellipsis;
     transition: 250ms;
 }
-body {
-    min-height: 100vh;
-}
 
 #ko {
     background: left/cover url('/images/backgroundDefault.jpg');

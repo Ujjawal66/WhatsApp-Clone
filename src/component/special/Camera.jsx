@@ -6,14 +6,13 @@ position: absolute;
 padding: 2rem 2rem;
 z-index: 100;
 top: 0; left: 0;
+bottom: 0; right: 0;
 background-color: black;
 color: #fff;
 font-size: 1.3rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-width: 100vw;
-height: 100vh;
 .flex1, .flex2 {
   display: flex;
   justify-content: space-between;
