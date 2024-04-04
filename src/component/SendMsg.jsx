@@ -35,21 +35,40 @@ button {
 i {
   position: absolute;
   font-size: 1.4rem;
-  color: gray;
-&.a {
   top: 50%;
-  left: 1.3rem;
+  color: gray;
   transform: translate(0, -50%);
+&.a {
+  left: 1.3rem;
 }
-&.d{
-  right: 0.6rem;
-}
-&.c {right: 3rem;}
+&.d{right: 0.6rem; transition: 0s}
+&.c {right: 3rem; transition: 0s}
 &.b {right: 5.7rem;}
 }
 `
 const SendMsg =({onSend, h}) => {
   const [value, setValue] = useState("");
+  const b = useRef();
+  const c = useRef();
+  const d = useRef();
+  const handlerChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  useEffect(() => {
+    if(!value) {
+      b.current.style.right = "5.7rem";
+      c.current.style.display = "initial";
+      d.current.style.display = "initial";
+    }
+    else {
+      b.current.style.right = "0.6rem";
+      c.current.style.display = "none";
+      d.current.style.display = "none";
+    }
+  }, [value])
+  
+
   return (
     <Form onSubmit={(event) => {
       onSend(event, value);
@@ -57,10 +76,10 @@ const SendMsg =({onSend, h}) => {
     }} ref={h}>
       <label>
         <i className="fa-regular fa-face-smile-beam a"></i>
-        <input type="text" placeholder="Message" value={value} onChange={(event)=>setValue(event.target.value)}/>
-        <i className="fa-solid fa-paperclip b"></i>
-        <i className="fa-brands fa-bitcoin c"></i>
-        <i className="fa-solid fa-camera d"></i>
+        <input type="text" placeholder="Message" value={value} onChange={handlerChange} autoFocus/>
+        <i className="fa-solid fa-paperclip b" ref={b}></i>
+        <i className="fa-brands fa-bitcoin c" ref={c}></i>
+        <i className="fa-solid fa-camera d" ref={d}></i>
       </label>
       <button type="submit"><i className="fa-solid fa-paper-plane"></i></button>
     </Form>
