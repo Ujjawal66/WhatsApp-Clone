@@ -10,10 +10,8 @@ margin: 5% 3%;
 gap: 0.6rem;
 img {
   width: 30rem;
-  max-width: 40vw;
-}
-h3 {
-
+  min-width: 40vw;
+  max-width: 70vw;
 }
 p {
   width: 90%;
